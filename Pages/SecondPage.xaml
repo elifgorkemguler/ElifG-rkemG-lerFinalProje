@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proje.Pages.SecondPage"
+             Title="Regl Bilgisi"
+             BackgroundColor="#FDF5F8">
+
+    <Grid ColumnDefinitions="*,*" Padding="20" RowSpacing="20">
+
+        <!-- Sol Bölüm: 3 Takvim -->
+        <VerticalStackLayout Grid.Column="0" Spacing="20" HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+
+            <!-- 1. Regl Takvimi -->
+            <VerticalStackLayout>
+                <Label Text="1. Regl Takvimi" 
+                       FontAttributes="Bold" 
+                       FontSize="18" 
+                       TextColor="#444" 
+                       HorizontalOptions="Center" />
+                <DatePicker x:Name="Regl1Start" 
+                            TextColor="#333" 
+                            BackgroundColor="White" />
+                <DatePicker x:Name="Regl1End" 
+                            TextColor="#333" 
+                            BackgroundColor="White" />
+                <Label x:Name="Regl1Duration" 
+                       FontAttributes="Italic" 
+                       FontSize="14" 
+                       TextColor="#888" 
+                       HorizontalOptions="Center" />
+            </VerticalStackLayout>
+
+            <!-- 2. Regl Takvimi -->
+            <VerticalStackLayout>
+                <Label Text="2. Regl Takvimi" 
+                       FontAttributes="Bold" 
+                       FontSize="18" 
+                       TextColor="#444" 
+                       HorizontalOptions="Center" />
+                <DatePicker x:Name="Regl2Start" 
+                            TextColor="#333" 
+                            BackgroundColor="White" />
+                <DatePicker x:Name="Regl2End" 
+                            TextColor="#333" 
+                            BackgroundColor="White" />
+                <Label x:Name="Regl2Duration" 
+                       FontAttributes="Italic" 
+                       FontSize="14" 
+                       TextColor="#888" 
+                       HorizontalOptions="Center" />
+            </VerticalStackLayout>
+
+            <!-- 3. Regl Takvimi -->
+            <VerticalStackLayout>
+                <Label Text="3. Regl Takvimi" 
+                       FontAttributes="Bold" 
+                       FontSize="18" 
+                       TextColor="#444" 
+                       HorizontalOptions="Center" />
+                <DatePicker x:Name="Regl3Start" 
+                            TextColor="#333" 
+                            BackgroundColor="White" />
+                <DatePicker x:Name="Regl3End" 
+                            TextColor="#333" 
+                            BackgroundColor="White" />
+                <Label x:Name="Regl3Duration" 
+                       FontAttributes="Italic" 
+                       FontSize="14" 
+                       TextColor="#888" 
+                       HorizontalOptions="Center" />
+            </VerticalStackLayout>
+
+        </VerticalStackLayout>
+
+        <!-- Sağ Bölüm: Boy ve Kilo Girişi -->
+        <VerticalStackLayout Grid.Column="1" Spacing="20" HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+
+            <!-- Boy Girişi -->
+            <VerticalStackLayout>
+                <Label Text="Boy (cm)" 
+                       FontAttributes="Bold" 
+                       FontSize="18" 
+                       TextColor="#444" 
+                       HorizontalOptions="Center" />
+                <Entry x:Name="HeightEntry" 
+                       Placeholder="Boy (cm)" 
+                       Keyboard="Numeric" 
+                       FontSize="16" 
+                       BackgroundColor="White" 
+                       TextColor="#333" 
+                       PlaceholderColor="#999"
+                       HeightRequest="50" 
+                       WidthRequest="200" 
+                       HorizontalOptions="Center" />
+            </VerticalStackLayout>
+
+            <!-- Kilo Girişi -->
+            <VerticalStackLayout>
+                <Label Text="Kilo (kg)" 
+                       FontAttributes="Bold" 
+                       FontSize="18" 
+                       TextColor="#444" 
+                       HorizontalOptions="Center" />
+                <Entry x:Name="WeightEntry" 
+                       Placeholder="Kilo (kg)" 
+                       Keyboard="Numeric" 
+                       FontSize="16" 
+                       BackgroundColor="White" 
+                       TextColor="#333" 
+                       PlaceholderColor="#999"
+                       HeightRequest="50" 
+                       WidthRequest="200" 
+                       HorizontalOptions="Center" />
+            </VerticalStackLayout>
+
+            <!-- Kaydet ve Devam -->
+            <Button Text="Kaydet ve Devam Et" 
+                    FontSize="18" 
+                    TextColor="White" 
+                    BackgroundColor="#D81B60" 
+                    CornerRadius="25" 
+                    HeightRequest="50" 
+                    WidthRequest="200"
+                    HorizontalOptions="Center"
+                    Clicked="OnSaveAndContinueClicked" />
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

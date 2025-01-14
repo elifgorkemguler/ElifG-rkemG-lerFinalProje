@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Proje.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Proje"
+    xmlns:Pages="clr-namespace:Proje.Pages"
+    Shell.FlyoutBehavior="Disabled"
+    Title="Proje">
+
+    <ShellContent
+        Title="Kayıt Ol"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+    <ShellContent 
+        Title="Regl Bilgisi" 
+        ContentTemplate="{DataTemplate Pages:SecondPage}" 
+        Route="SecondPage"/>
+    <ShellContent 
+        Title="Takvim" 
+        ContentTemplate="{DataTemplate Pages:CalendarPage}" 
+        Route="CalendarPage"/>
+    
+
+
+</Shell>
+
+

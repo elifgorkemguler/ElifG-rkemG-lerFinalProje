@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proje.Pages.CalendarPage"
+             Title="Takvim"
+             BackgroundColor="#FDF5F8">
+
+    <VerticalStackLayout Padding="20" Spacing="20" HorizontalOptions="FillAndExpand">
+
+        <!-- Ay Seçimi -->
+        <HorizontalStackLayout HorizontalOptions="CenterAndExpand" Spacing="10">
+            <Button Text="⟵" 
+                    BackgroundColor="#D81B60" 
+                    TextColor="White" 
+                    FontSize="18"
+                    CornerRadius="20" 
+                    HeightRequest="40" 
+                    WidthRequest="60" 
+                    Clicked="OnPreviousMonthClicked" />
+            <Label x:Name="MonthLabel" 
+                   FontSize="24" 
+                   FontAttributes="Bold" 
+                   TextColor="#333" 
+                   HorizontalOptions="Center" />
+            <Button Text="⟶" 
+                    BackgroundColor="#D81B60" 
+                    TextColor="White" 
+                    FontSize="18"
+                    CornerRadius="20" 
+                    HeightRequest="40" 
+                    WidthRequest="60" 
+                    Clicked="OnNextMonthClicked" />
+        </HorizontalStackLayout>
+
+        <!-- Haftanın Günleri -->
+        <Grid ColumnDefinitions="*,*,*,*,*,*,*">
+            <Label Text="Pzt" FontSize="18" FontAttributes="Bold" TextColor="#666" 
+                   HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="0" />
+            <Label Text="Sal" FontSize="18" FontAttributes="Bold" TextColor="#666" 
+                   HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="1" />
+            <Label Text="Çar" FontSize="18" FontAttributes="Bold" TextColor="#666" 
+                   HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="2" />
+            <Label Text="Per" FontSize="18" FontAttributes="Bold" TextColor="#666" 
+                   HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="3" />
+            <Label Text="Cum" FontSize="18" FontAttributes="Bold" TextColor="#666" 
+                   HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="4" />
+            <Label Text="Cmt" FontSize="18" FontAttributes="Bold" TextColor="#D81B60" 
+                   HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="5" />
+            <Label Text="Paz" FontSize="18" FontAttributes="Bold" TextColor="#D81B60" 
+                   HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="6" />
+        </Grid>
+
+        <!-- Takvim Günleri -->
+        <Grid x:Name="CalendarDaysGrid" 
+              ColumnDefinitions="*,*,*,*,*,*,*"
+              RowSpacing="5" ColumnSpacing="5"
+              HorizontalOptions="FillAndExpand" 
+              VerticalOptions="FillAndExpand">
+        </Grid>
+
+        <!-- Alt Butonlar -->
+        <Grid ColumnDefinitions="*,*">
+            <Button Text="Hamilelik Takibi"
+                    BackgroundColor="#512DA8"
+                    TextColor="White"
+                    FontSize="16"
+                    CornerRadius="0"
+                    HeightRequest="50"
+                    Grid.Column="0"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="End"
+                    Clicked="OnPregnancyTrackerClicked" />
+            <Button Text="Egzersiz ve Meditasyon"
+                    BackgroundColor="#388E3C"
+                    TextColor="White"
+                    FontSize="16"
+                    CornerRadius="0"
+                    HeightRequest="50"
+                    Grid.Column="1"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="End"
+                    Clicked="OnExercisesClicked" />
+        </Grid>
+
+        <!-- Renk Açıklamaları -->
+        <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto" Margin="0,20,0,20">
+            <VerticalStackLayout Grid.Column="0" Grid.Row="0" Spacing="10">
+                <HorizontalStackLayout Spacing="10">
+                    <Frame BackgroundColor="Red" WidthRequest="20" HeightRequest="20" />
+                    <Label Text="Regl Dönemi" VerticalOptions="Center" />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout Spacing="10">
+                    <Frame BackgroundColor="Pink" WidthRequest="20" HeightRequest="20" />
+                    <Label Text="Tahmini Regl" VerticalOptions="Center" />
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+            <VerticalStackLayout Grid.Column="1" Grid.Row="0" Spacing="10">
+                <HorizontalStackLayout Spacing="10">
+                    <Frame BackgroundColor="LightGreen" WidthRequest="20" HeightRequest="20" />
+                    <Label Text="Yumurtlama Günü" VerticalOptions="Center" />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout Spacing="10">
+                    <Frame BackgroundColor="LightBlue" WidthRequest="20" HeightRequest="20" />
+                    <Label Text="Verimli Günler" VerticalOptions="Center" />
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </Grid>
+
+    </VerticalStackLayout>
+</ContentPage>

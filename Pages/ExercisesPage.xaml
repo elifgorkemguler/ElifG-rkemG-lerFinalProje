@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proje.Pages.ExercisesPage"
+             Title="Egzersiz ve Meditasyon"
+             BackgroundColor="#FDF5F8">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="30" HorizontalOptions="Center" VerticalOptions="FillAndExpand">
+
+            <!-- Başlık -->
+            <Label Text="Egzersiz ve Meditasyon Videoları" 
+                   FontSize="28" 
+                   FontAttributes="Bold" 
+                   TextColor="#D81B60" 
+                   HorizontalOptions="Center" />
+
+            <!-- Egzersiz Videosu -->
+            <Frame BackgroundColor="White" CornerRadius="15" Padding="10" HasShadow="True">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Egzersiz Videosu" 
+                           FontSize="20" 
+                           FontAttributes="Bold" 
+                           TextColor="#333" 
+                           HorizontalOptions="Center" />
+                    <WebView HeightRequest="200" 
+                             WidthRequest="300" 
+                             Source="https://www.youtube.com/embed/S4UfZ2TV_uA" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Meditasyon Videosu -->
+            <Frame BackgroundColor="White" CornerRadius="15" Padding="10" HasShadow="True">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Meditasyon Videosu" 
+                           FontSize="20" 
+                           FontAttributes="Bold" 
+                           TextColor="#333" 
+                           HorizontalOptions="Center" />
+                    <WebView HeightRequest="200" 
+                             WidthRequest="300" 
+                             Source="https://www.youtube.com/embed/inpok4MKVLM" />
+                </VerticalStackLayout>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

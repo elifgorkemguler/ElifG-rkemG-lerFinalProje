@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proje.MainPage"
+             Title="Kayıt Ol"
+             BackgroundColor="#FDF5F8">
+
+    <VerticalStackLayout Padding="30" Spacing="25" HorizontalOptions="Center" VerticalOptions="Center">
+
+        <!-- Başlık -->
+        <Label Text="Hoş Geldiniz!" 
+               FontSize="28" 
+               FontAttributes="Bold"
+               TextColor="#D81B60"
+               HorizontalOptions="Center" />
+
+        <!-- Açıklama -->
+        <Label Text="Lütfen bilgilerinizi girerek kaydolun" 
+               FontSize="16" 
+               TextColor="#666"
+               HorizontalOptions="Center" />
+
+        <!-- Ad -->
+        <Entry x:Name="FirstNameEntry" 
+               Placeholder="Adınız" 
+               FontSize="16" 
+               BackgroundColor="White" 
+               TextColor="#333" 
+               PlaceholderColor="#999" 
+               Margin="0,10,0,0"
+               HeightRequest="50" 
+               HorizontalOptions="Fill" />
+
+        <!-- Soyad -->
+        <Entry x:Name="LastNameEntry" 
+               Placeholder="Soyadınız" 
+               FontSize="16" 
+               BackgroundColor="White" 
+               TextColor="#333" 
+               PlaceholderColor="#999" 
+               Margin="0,10,0,0"
+               HeightRequest="50" 
+               HorizontalOptions="Fill" />
+
+        <!-- E-posta -->
+        <Entry x:Name="EmailEntry" 
+               Placeholder="E-posta Adresiniz" 
+               FontSize="16" 
+               BackgroundColor="White" 
+               TextColor="#333" 
+               PlaceholderColor="#999" 
+               Keyboard="Email"
+               Margin="0,10,0,0"
+               HeightRequest="50" 
+               HorizontalOptions="Fill" />
+
+        <!-- Kayıt Ol Butonu -->
+        <Button Text="Kayıt Ol" 
+                FontSize="18" 
+                TextColor="White" 
+                BackgroundColor="#D81B60" 
+                CornerRadius="25"
+                HeightRequest="50"
+                HorizontalOptions="Fill"
+                Clicked="OnRegisterClicked" />
+
+    </VerticalStackLayout>
+
+</ContentPage>

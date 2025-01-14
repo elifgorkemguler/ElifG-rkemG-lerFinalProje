@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proje.Pages.PregnancyTrackerPage"
+             Title="Hamilelik Takibi"
+             BackgroundColor="#FDF5F8">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="25" HorizontalOptions="Center" VerticalOptions="Center">
+
+            <!-- Başlık -->
+            <Label Text="Hamilelik Takibi" 
+                   FontSize="28" 
+                   FontAttributes="Bold" 
+                   TextColor="#D81B60" 
+                   HorizontalOptions="Center" />
+
+            <!-- Açıklama -->
+            <Label Text="Hamilelik başlangıç tarihinizi seçin ve sürecinizi takip edin." 
+                   FontSize="16" 
+                   TextColor="#666" 
+                   HorizontalOptions="Center" 
+                   HorizontalTextAlignment="Center" />
+
+            <!-- Tarih Seçici -->
+            <StackLayout>
+                <Label Text="Hamilelik Başlangıç Tarihi:" 
+                       FontSize="18" 
+                       FontAttributes="Bold" 
+                       TextColor="#444" />
+                <DatePicker x:Name="PregnancyStartDatePicker" 
+                            FontSize="16" 
+                            TextColor="#333" 
+                            BackgroundColor="White" 
+                            Format="D" 
+                            Margin="0,10,0,0" />
+            </StackLayout>
+
+            <!-- Hamilelik Başlangıcını Kaydet Butonu -->
+            <Button Text="Başlangıcı Kaydet" 
+                    FontSize="18" 
+                    BackgroundColor="#512DA8" 
+                    TextColor="White" 
+                    CornerRadius="25" 
+                    HeightRequest="50" 
+                    HorizontalOptions="Fill" 
+                    Clicked="OnStartPregnancyButtonClicked" />
+
+            <!-- Geri Sayım Bilgisi -->
+            <Frame x:Name="CountdownInfoStack" IsVisible="False" Padding="10" Margin="0,15,0,0"
+       BackgroundColor="White" 
+       CornerRadius="10" 
+       HasShadow="True">
+                <VerticalStackLayout Spacing="15">
+                    <Label Text="Geri Sayım Bilgileri" 
+               FontSize="20" 
+               FontAttributes="Bold" 
+               TextColor="#D81B60" 
+               HorizontalOptions="Center" />
+                    <Label x:Name="DaysRemainingLabel" 
+               FontSize="16" 
+               TextColor="#333" 
+               HorizontalOptions="Center" />
+                    <Label x:Name="HoursRemainingLabel" 
+               FontSize="16" 
+               TextColor="#333" 
+               HorizontalOptions="Center" />
+                    <Label x:Name="MinutesRemainingLabel" 
+               FontSize="16" 
+               TextColor="#333" 
+               HorizontalOptions="Center" />
+                    <Label x:Name="EstimatedDueDateLabel" 
+               FontSize="16" 
+               TextColor="#1E88E5" 
+               HorizontalOptions="Center" />
+                </VerticalStackLayout>
+            </Frame>
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
